@@ -70,7 +70,8 @@ class _ChooseEventScreenState extends State<ChooseEventScreen> {
                   color: Colors.amber,
                   elevation: 0,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: const Text(
                     "Continue ",
                     style: TextStyle(fontSize: 16),
@@ -114,11 +115,12 @@ class _ChooseEventScreenState extends State<ChooseEventScreen> {
               Text(
                 name,
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: selectedService == index
-                        ? Colors.amber.shade800
-                        : Colors.black),
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: selectedService == index
+                      ? Colors.amber.shade800
+                      : Colors.black,
+                ),
               )
             ]),
       ),

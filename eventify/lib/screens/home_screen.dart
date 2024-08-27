@@ -14,236 +14,127 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          height: 500,
-          padding:
-              const EdgeInsets.only(top: 100, right: 40, left: 40, bottom: 50),
-          decoration: BoxDecoration(color: Colors.red.shade100),
-          width: double.infinity,
-          child: Lottie.asset("assets/88146-event-venue.json"),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Text("Schedule an event?", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
-              Shimmer.fromColors(
-                baseColor: Colors.black,
-                highlightColor: Colors.red,
-                child: const Text(
-                  'Schedule an event?',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(children: [
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 180,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                )
-              ]),
-              const SizedBox(
-                height: 16,
-              ),
-              Row(children: [
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 250,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                )
-              ]),
-              const SizedBox(
-                height: 16,
-              ),
-              Row(children: [
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 40,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 200,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Shimmer.fromColors(
-                  baseColor: Colors.grey.shade200,
-                  highlightColor: Colors.grey.shade300,
-                  child: Container(
-                    width: 120,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    padding: const EdgeInsets.all(8),
-                  ),
-                )
-              ]),
-
-              const SizedBox(
-                height: 30,
-              ),
-              Column(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 500,
+              padding: const EdgeInsets.only(
+                  top: 100, right: 40, left: 40, bottom: 50),
+              decoration: BoxDecoration(color: Colors.red.shade100),
+              width: double.infinity,
+              child: Lottie.asset("assets/88146-event-venue.json"),
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 30.0, horizontal: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  MaterialButton(
-                    onPressed: () => {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const ChooseEventScreen(),
-                        ),
-                      )
-                    },
-                    height: 50,
-                    elevation: 0,
-                    highlightElevation: 0,
-                    minWidth: double.infinity,
-                    color: Colors.grey.shade200,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Colors.grey.shade300,
-                      ),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
+                  Shimmer.fromColors(
+                    baseColor: Colors.black,
+                    highlightColor: Colors.red,
                     child: const Text(
-                      "Today",
+                      'Schedule an event?',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 32.0,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 12,
-                  ),
-                  MaterialButton(
-                    onPressed: () => {},
-                    height: 50,
-                    elevation: 0,
-                    highlightElevation: 0,
-                    minWidth: double.infinity,
-                    color: Colors.grey.shade200,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Colors.grey.shade300,
-                      ),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Text(
-                      "Tomorrow",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
+                  const SizedBox(height: 20),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        _buildShimmerContainer(180),
+                        const SizedBox(width: 10),
+                        _buildShimmerContainer(100),
+                      ],
                     ),
                   ),
-                  const SizedBox(
-                    height: 12,
+                  const SizedBox(height: 16),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        _buildShimmerContainer(100),
+                        const SizedBox(width: 10),
+                        _buildShimmerContainer(250),
+                      ],
+                    ),
                   ),
-                  MaterialButton(
-                    onPressed: () => {},
-                    height: 50,
-                    elevation: 0,
-                    highlightElevation: 0,
-                    minWidth: double.infinity,
-                    color: Colors.grey.shade200,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Colors.grey.shade300,
-                      ),
-                      borderRadius: BorderRadius.circular(8),
+                  const SizedBox(height: 16),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        _buildShimmerContainer(40),
+                        const SizedBox(width: 10),
+                        _buildShimmerContainer(200),
+                        const SizedBox(width: 10),
+                        _buildShimmerContainer(120),
+                      ],
                     ),
-                    child: const Text(
-                      "Next week",
-                      style: TextStyle(
-                        color: Colors.red,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
+                  ),
+                  const SizedBox(height: 30),
+                  _buildButton("Today", () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const ChooseEventScreen(),
                       ),
-                    ),
-                  )
+                    );
+                  }),
+                  const SizedBox(height: 12),
+                  _buildButton("Tomorrow", () {}),
+                  const SizedBox(height: 12),
+                  _buildButton("Next week", () {}),
                 ],
-              )
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
-      ],
-    ));
+      ),
+    );
+  }
+
+  Widget _buildShimmerContainer(double width) {
+    return Shimmer.fromColors(
+      baseColor: Colors.grey.shade200,
+      highlightColor: Colors.grey.shade300,
+      child: Container(
+        width: width,
+        height: 16,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(3),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButton(String text, VoidCallback onPressed) {
+    return MaterialButton(
+      onPressed: onPressed,
+      height: 50,
+      elevation: 0,
+      highlightElevation: 0,
+      minWidth: double.infinity,
+      color: Colors.grey.shade200,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: Colors.grey.shade300),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Colors.red,
+          fontSize: 18,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
   }
 }
