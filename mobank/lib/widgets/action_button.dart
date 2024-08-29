@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/transfer_money.dart';
+import '../screens/transfer_money_screen.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
