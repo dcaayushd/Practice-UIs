@@ -9,6 +9,7 @@ dependencies:
   fl_chart: ^0.69.0
   flutter:
     sdk: flutter
+  mobile_scanner: ^5.2.1
   modal_bottom_sheet: ^3.0.0
 
 dev_dependencies:
