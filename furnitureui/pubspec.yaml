@@ -1,6 +1,6 @@
 name: furnitureui
 description: "A new Flutter project."
-publish_to: 'none'
+
 version: 0.1.0
 
 environment:
@@ -17,3 +17,17 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Monologue
+      fonts:
+        - asset: assets/fonts/Monologue_DEMO.ttf
+    - family: SF Pro Display
+      fonts:
+        - asset: assets/fonts/SFPRODISPLAYREGULAR.otf
+        - asset: assets/fonts/SFPRODISPLAYBOLD.otf
+          weight: 700
+        - asset: assets/fonts/SFPRODISPLAYMEDIUM.otf
+          weight: 500
