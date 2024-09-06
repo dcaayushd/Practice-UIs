@@ -1,6 +1,6 @@
 name: headphoneapp
 description: "A new Flutter project."
-publish_to: 'none'
+
 version: 0.1.0
 
 environment:
@@ -17,3 +17,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/boat450/
+    - assets/boat450/black/
+    - assets/boat450/beige/
+    - assets/boat450/blue/
+    - assets/related_products/
