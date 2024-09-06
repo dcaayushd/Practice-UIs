@@ -66,14 +66,14 @@ List<String> highlights = [
   'Connector type: 3.5 mm',
   'Battery life: 15 hr | Charging time: 3 Hours',
   '40mm Drivers: HD Sound',
-  'Adjustable Earcups',
+  'Adjustable Ear cups',
   'Up to 15 H Playback',
   'Bluetooth version 5.0',
   "Dual Modes: Bluetooth & AUX",
 ];
 
 String description =
-    'Are you looking for a headset that features eye-catching aesthetics and dual modes? If yes, bring home the boAt Rockerz 450 that has an AUX-mode as well as the Bluetooth connectivity feature. The 40-mm drivers and adjustable earcups ensure you enjoy a comfortable listening experience that is immersive.';
+    'Are you looking for a headset that features eye-catching aesthetics and dual modes? If yes, bring home the boAt Rockerz 450 that has an AUX-mode as well as the Bluetooth connectivity feature. The 40-mm drivers and adjustable ear cups ensure you enjoy a comfortable listening experience that is immersive.';
 
 /// Models
 
