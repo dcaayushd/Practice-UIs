@@ -1,6 +1,5 @@
 name: pizzaapp
 description: "A new Flutter project."
-publish_to: 'none'
 version: 0.1.0
 
 environment:
@@ -17,3 +16,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/onboarding/
+    - assets/ingredients/
+    - assets/ingredients/single_units/
+    - assets/pizzabox/
+    - assets/pizzas/
