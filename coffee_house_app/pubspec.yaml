@@ -16,3 +16,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/coffees/
+    - assets/coffees/1/
+    - assets/coffees/2/
+    - assets/coffees/3/
+    - assets/coffees/4/
+    - assets/coffees/5/
