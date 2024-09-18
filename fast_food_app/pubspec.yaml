@@ -16,3 +16,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+assets:
+  - assets/icons/
+  - assets/other_icons/
+  - assets/images/
+  - assets/images/donuts/
+  - assets/images/smoothies/
+  - assets/images/pizzas/
+  - assets/images/pizzas/remix/
