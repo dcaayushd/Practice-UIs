@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:fast_food_app/models/smoothie.dart';
 import 'package:flutter/material.dart';
-import 'package:fast_food_app/views/screens/home/tabs/smoothie/view_smoothie/view_smoothie_page.dart';
+import 'package:fast_food_app/views/screens/home/tabs/smoothie/view_smoothie/view_smoothie_screen.dart';
 
 class SmoothieCard extends StatelessWidget {
   final Smoothie smoothie;
@@ -20,7 +20,7 @@ class SmoothieCard extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => SmoothiePage(smoothie: smoothie)));
+              builder: (context) => SmoothieScreen(smoothie: smoothie)));
         },
         child: Stack(
           children: [
