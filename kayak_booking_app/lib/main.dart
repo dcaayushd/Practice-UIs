@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:kayak_booking_app/views/home/home.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const KayakBookingApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class KayakBookingApp extends StatelessWidget {
+  const KayakBookingApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+        title: 'Yathch Booking App',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-      ),
-    );
+        home: const HomeScreen());
   }
 }
