@@ -16,3 +16,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/icons/
+    - assets/plates/
+    - assets/ingredients/
+    - assets/more_ingredients/
