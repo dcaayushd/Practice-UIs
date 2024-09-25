@@ -16,3 +16,21 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/
+    - assets/images/
+    - assets/images/extra_ingredients/
+    - assets/images/coffee/
+    - assets/images/coffee_shops/
+    - assets/images/people/
+    - assets/images/ingredients/
+  fonts:
+    - family: varela
+      fonts:
+        - asset: assets/fonts/VarelaRound-Regular.ttf
+    - family: nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-Light.ttf
+          weight: 300
