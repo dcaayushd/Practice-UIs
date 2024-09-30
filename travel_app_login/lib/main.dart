@@ -1,8 +1,6 @@
-// ignore_for_file: unused_element
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:travel_app_login/screens/home/home.dart';
+import 'package:travel_app_login/screens/login/login.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -29,8 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: const Color(0xFFF3F5F7),
       ),
-      // home: const LoginScreen(),
-      home: const HomeScreen(),
+      home: const LoginScreen(),
     );
   }
 }
