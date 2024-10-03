@@ -16,3 +16,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/dummy_data/
+    - assets/dummy_data/channels/
+    - assets/dummy_data/thumbs/
