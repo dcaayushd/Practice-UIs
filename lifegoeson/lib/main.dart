@@ -1,20 +1,97 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      // home: LifeGoesOnPage(),
+      home: HomePage(),
     );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  List<Color> colors = [
+    Colors.blue,
+    Colors.red,
+    Colors.yellow,
+    Colors.deepPurpleAccent
+  ];
+
+  int currentColor = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        currentColor == 3 ? currentColor = 0 : currentColor = currentColor + 1;
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+          child: AnimatedContainer(
+        duration: const Duration(milliseconds: 800),
+        color: colors[currentColor],
+        child: const Center(
+          child: ImageSequence(),
+        ),
+      )),
+    );
+  }
+}
+
+class ImageSequence extends StatefulWidget {
+  const ImageSequence({super.key});
+
+  @override
+  ImageSequenceState createState() => ImageSequenceState();
+}
+
+class ImageSequenceState extends State<ImageSequence> {
+  List allImages = [];
+  int currentImage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (allImages.isEmpty) {
+      for (int i = 0; i < 15; i++) {
+        allImages.add('assets/duckimages/image${i.toString()}.png');
+      }
+    }
+
+    Timer.periodic(const Duration(milliseconds: 70), (timer) {
+      setState(() {
+        currentImage < 14 ? currentImage = currentImage + 1 : currentImage = 0;
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(allImages[currentImage]);
   }
 }
