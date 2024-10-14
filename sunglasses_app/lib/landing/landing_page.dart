@@ -11,7 +11,7 @@ class LandingPage extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Image.asset(
-            'assets/landing.jpg',
+            'assets/images/landing.jpg',
             fit: BoxFit.cover,
           ),
         ),

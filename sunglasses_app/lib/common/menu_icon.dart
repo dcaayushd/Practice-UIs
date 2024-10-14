@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class MenuIcon extends StatelessWidget {
   final double width;
   final double height;
-  const MenuIcon({required this.width, required this.height, Key? key})
-      : super(key: key);
+  const MenuIcon({required this.width, required this.height, super.key});
 
   @override
   Widget build(BuildContext context) {
