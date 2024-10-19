@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:powergrid_app/utils/colors.dart';
+import '../utils/colors.dart';
 
 class DottedBorder extends CustomPainter {
   final int numberOfStories;
