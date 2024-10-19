@@ -13,37 +13,29 @@ class WhatsAppTab extends StatelessWidget {
       length: 4,
       child: Scaffold(
         body: NestedScrollView(
-          headerSliverBuilder: (BuildContext context,
-              bool innerBoxIsScrolled) {
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
                   pinned: true,
                   floating: true,
                   snap: true,
-                  backgroundColor:
-                      const Color(0XFF075E54),
+                  backgroundColor: const Color(0XFF075E54),
                   title: const Text("WhatsApp"),
                   actions: const [
                     Icon(Icons.search),
-                    Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 3)),
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 3)),
                     Icon(Icons.more_vert)
                   ],
                   bottom: TabBar(
                     indicatorColor: Colors.white,
                     isScrollable: true,
-                    indicatorSize:
-                        TabBarIndicatorSize.tab,
+                    indicatorSize: TabBarIndicatorSize.tab,
                     labelPadding:
-                        const EdgeInsets.symmetric(
-                            horizontal: 0,
-                            vertical: 5),
+                        const EdgeInsets.symmetric(horizontal: 0, vertical: 5),
                     tabs: [
                       SizedBox(
                         width: yourWidth,
-                        child: const Icon(
-                            Icons.camera_alt),
+                        child: const Icon(Icons.camera_alt),
                       ),
                       Container(
                         width: yourWidth * 3,
@@ -89,4 +81,6 @@ class WhatsAppTab extends StatelessWidget {
 }
 
 TextStyle customStyle = const TextStyle(
-    fontSize: 19, fontWeight: FontWeight.w700);
+  fontSize: 19,
+  fontWeight: FontWeight.w700,
+);
