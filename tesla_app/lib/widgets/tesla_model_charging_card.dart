@@ -58,7 +58,7 @@ class TeslaModelChargingCard extends StatelessWidget {
                   SizedBox(
                     height: 50,
                     child: Image.asset(
-                      'assets/tesla.png',
+                      'assets/images/tesla.png',
                     ),
                   ),
                   const SizedBox(width: 7),
