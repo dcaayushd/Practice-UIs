@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:porsche/utilities/colors.dart';
 
 class DetailsAndFeaturesTab extends StatefulWidget {
-  const DetailsAndFeaturesTab({Key? key}) : super(key: key);
+  const DetailsAndFeaturesTab({super.key});
 
   @override
   State<DetailsAndFeaturesTab> createState() => _DetailsAndFeaturesTabState();
@@ -27,7 +27,7 @@ class _DetailsAndFeaturesTabState extends State<DetailsAndFeaturesTab> {
         child: Stack(
           children: [
             AnimatedPositioned(
-              duration: Duration(milliseconds: 150),
+              duration: const Duration(milliseconds: 150),
               left: _detailsTabSelected
                   ? 0
                   : (MediaQuery.of(context).size.width / 2) - 45,

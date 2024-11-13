@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:porsche/models/car_config_models.dart';
 
 class ConfigHorizontalListView extends StatefulWidget {
-  const ConfigHorizontalListView({Key? key}) : super(key: key);
+  const ConfigHorizontalListView({super.key});
 
   @override
   State<ConfigHorizontalListView> createState() =>
@@ -30,7 +30,7 @@ class _ConfigHorizontalListViewState extends State<ConfigHorizontalListView> {
               });
             },
             child: AnimatedContainer(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               height: 100,
               margin: const EdgeInsets.only(right: 18),
               width: 110,
@@ -63,7 +63,7 @@ class _ConfigHorizontalListViewState extends State<ConfigHorizontalListView> {
                   ),
                   Text(
                     configModel.configName,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,

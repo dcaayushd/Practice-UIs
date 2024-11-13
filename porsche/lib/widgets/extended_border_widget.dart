@@ -29,7 +29,7 @@ class ExtendedBorderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
       padding: padding,
       decoration: BoxDecoration(
         color: isSelected ? selectedColor ?? Colors.white : innerColor,

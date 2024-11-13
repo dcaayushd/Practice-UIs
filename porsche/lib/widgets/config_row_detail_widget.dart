@@ -23,7 +23,7 @@ class ConfigRowDetailWidget extends StatelessWidget {
           const SizedBox(width: 10),
           Text(
             model.configType,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 17,
               fontWeight: FontWeight.w400,
@@ -32,7 +32,7 @@ class ConfigRowDetailWidget extends StatelessWidget {
           const Spacer(),
           Text(
             model.configValue,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.w700,

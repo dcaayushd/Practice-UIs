@@ -22,13 +22,13 @@ class CarDetailedPageHeaderWidget extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).pop();
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.black,
                   size: 25,
                 ),
               ),
-              Text(
+              const Text(
                 'Porsche Prestige',
                 style: TextStyle(
                   color: Colors.black,
@@ -36,7 +36,7 @@ class CarDetailedPageHeaderWidget extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.share_rounded,
                 color: Colors.black,
                 size: 25,

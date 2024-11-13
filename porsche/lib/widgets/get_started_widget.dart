@@ -27,7 +27,7 @@ class GetStartedWidget extends StatelessWidget {
               selectedColor: PorscheColors.darkGreen,
               shadowColor: Colors.white,
               offset: const Offset(3, 4),
-              child: Icon(
+              child: const Icon(
                 CupertinoIcons.heart,
                 color: Colors.white,
                 size: 25,
@@ -46,7 +46,7 @@ class GetStartedWidget extends StatelessWidget {
               selectedColor: PorscheColors.veryLightGreen,
               shadowColor: PorscheColors.veryLightGreen,
               offset: const Offset(3, 4),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
