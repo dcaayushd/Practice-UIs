@@ -16,3 +16,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    # destinations
+    - assets/destinations/
+
+    # icons
+    - assets/icons/
+    - assets/profile.png
