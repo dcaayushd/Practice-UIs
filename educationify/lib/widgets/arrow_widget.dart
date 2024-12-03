@@ -17,7 +17,7 @@ class ArrowWidget extends StatelessWidget {
       ),
       child: Transform.rotate(
         angle: pi * -.34,
-        child: Icon(
+        child: const Icon(
           CupertinoIcons.arrow_right,
           color: EducationColors.darkColor,
           size: 25,

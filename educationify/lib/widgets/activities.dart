@@ -20,7 +20,7 @@ class Activities extends StatelessWidget {
             height: 70,
             alignment: Alignment.centerLeft,
             child: RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 style: TextStyle(
                   color: EducationColors.darkColor,
                   fontSize: 36,
@@ -40,7 +40,7 @@ class Activities extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.only(top: 3),
-            child: Row(
+            child: const Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
@@ -51,7 +51,7 @@ class Activities extends StatelessWidget {
                     darkColor: EducationColors.darkGreenColor,
                   ),
                 ),
-                const SizedBox(width: 10),
+                SizedBox(width: 10),
                 Expanded(
                   child: ActivityWidget(
                     rating: '4.8',
@@ -64,7 +64,7 @@ class Activities extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 30),
-          Text(
+          const Text(
             'Learning progress',
             style: TextStyle(
               color: EducationColors.darkColor,
@@ -74,7 +74,7 @@ class Activities extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          Row(
+          const Row(
             children: [
               Expanded(
                 child: LearningProgressWidget(
@@ -83,7 +83,7 @@ class Activities extends StatelessWidget {
                   color: EducationColors.greenColor,
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               Expanded(
                 child: LearningProgressWidget(
                   heading: 'Your score',
@@ -91,7 +91,7 @@ class Activities extends StatelessWidget {
                   color: EducationColors.yellowColor,
                 ),
               ),
-              const SizedBox(width: 10),
+              SizedBox(width: 10),
               Expanded(
                 child: LearningProgressWidget(
                   heading: 'Active',
@@ -102,7 +102,7 @@ class Activities extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: DetailedLearningProgressWidget(
               heading: 'Design & Creativity',
@@ -113,7 +113,7 @@ class Activities extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: DetailedLearningProgressWidget(
               heading: 'IT & Software',
@@ -124,7 +124,7 @@ class Activities extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: DetailedLearningProgressWidget(
               heading: 'DSA & Algorithms',

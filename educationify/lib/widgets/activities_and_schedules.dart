@@ -7,11 +7,11 @@ class ActivitiesAndSchedules extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Activities(),
-        const SizedBox(width: 15),
+        SizedBox(width: 15),
         LessonSchedule(),
       ],
     );

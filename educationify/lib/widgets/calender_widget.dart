@@ -29,12 +29,12 @@ class _CalenderWidgetState extends State<CalenderWidget> {
         children: [
           Positioned.fill(
             child: TableCalendar(
-              headerStyle: HeaderStyle(
+              headerStyle: const HeaderStyle(
                 leftChevronVisible: false,
                 rightChevronVisible: false,
                 formatButtonVisible: false,
                 headerMargin:
-                    const EdgeInsets.only(top: 5, bottom: 5, left: 10),
+                    EdgeInsets.only(top: 5, bottom: 5, left: 10),
                 titleTextStyle: TextStyle(
                   color: Colors.black,
                   fontSize: 23,
@@ -71,7 +71,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                     ),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
@@ -89,7 +89,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                     ),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
@@ -109,7 +109,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                     ),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
@@ -127,7 +127,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
                     ),
                     child: Text(
                       date.day.toString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                         fontWeight: FontWeight.w500,
@@ -142,14 +142,14 @@ class _CalenderWidgetState extends State<CalenderWidget> {
               focusedDay: selectedDay,
               rowHeight: 47,
               daysOfWeekHeight: 25,
-              calendarStyle: CalendarStyle(
+              calendarStyle: const CalendarStyle(
                 defaultTextStyle: TextStyle(
                   color: Colors.black,
                   fontSize: 17,
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              daysOfWeekStyle: DaysOfWeekStyle(
+              daysOfWeekStyle: const DaysOfWeekStyle(
                 weekdayStyle: TextStyle(
                   color: Colors.grey,
                   fontSize: 14,
@@ -163,7 +163,7 @@ class _CalenderWidgetState extends State<CalenderWidget> {
               ),
             ),
           ),
-          Positioned(
+          const Positioned(
             right: 5,
             top: 15,
             child: SizedBox(

@@ -77,7 +77,7 @@ class ActivityWidget extends StatelessWidget {
                               borderRadius: BorderRadius.circular(25),
                               border: Border.all(color: color, width: 1.7)),
                           alignment: Alignment.center,
-                          child: Text(
+                          child: const Text(
                             '+6',
                             style: TextStyle(
                                 color: EducationColors.darkColor,
@@ -93,7 +93,7 @@ class ActivityWidget extends StatelessWidget {
                 const SizedBox(height: 2),
                 Text(
                   text,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: EducationColors.darkColor,
                     fontSize: 23,
                     letterSpacing: -.5,
@@ -119,7 +119,7 @@ class ActivityWidget extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
+                      const Icon(
                         CupertinoIcons.star_fill,
                         color: EducationColors.yellowColor,
                         size: 13,
@@ -127,7 +127,7 @@ class ActivityWidget extends StatelessWidget {
                       const SizedBox(width: 3),
                       Text(
                         rating,
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: EducationColors.darkColor,
                             fontSize: 10.5,
                             letterSpacing: -.5,
@@ -136,7 +136,7 @@ class ActivityWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-                ArrowWidget(),
+                const ArrowWidget(),
               ],
             ),
           ),
