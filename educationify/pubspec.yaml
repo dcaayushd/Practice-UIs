@@ -9,6 +9,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  table_calendar: ^3.1.2
+  window_manager: ^0.4.3
 
 dev_dependencies:
   flutter_lints: ^4.0.0
