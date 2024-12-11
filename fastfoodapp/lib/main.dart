@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:fastfoodapp/screens/landing_screen.dart';
+import 'package:fastfoodapp/utils/constants.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: colorGreen));
+    return LayoutBuilder(builder: (context, constraints) {
+      return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Screen 2',
+        theme: ThemeData(textTheme: defaultText),
+        home: const LandingScreen(),
+      );
+    });
   }
 }
