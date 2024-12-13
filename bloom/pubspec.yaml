@@ -16,3 +16,15 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: worksans
+      fonts:
+        - asset: assets/fonts/WorkSans-Regular.ttf
+        - asset: assets/fonts/WorkSans-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/WorkSans-Light.ttf
+          weight: 400
+        - asset: assets/fonts/WorkSans-ExtraBold.ttf
+          weight: 700
