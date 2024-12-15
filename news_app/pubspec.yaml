@@ -6,6 +6,7 @@ environment:
   sdk: ^3.5.4
 
 dependencies:
+  bubble_tab_indicator: ^0.1.6
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
