@@ -41,7 +41,7 @@ final List<Map<String, dynamic>> posts = [
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +56,13 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
+class HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController controller;
 
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage>
       appBar: AppBar(
         title: const Text("Home"),
         flexibleSpace: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage>
             boxShadow: [
               BoxShadow(
                 color: pink,
-                offset: const Offset(0, 2.0),
+                offset: Offset(0, 2.0),
                 blurRadius: 20.0,
               )
             ],
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage>
           isScrollable: true,
           controller: controller,
           indicatorSize: TabBarIndicatorSize.tab,
-          indicator: BubbleTabIndicator(
+          indicator: const BubbleTabIndicator(
             indicatorHeight: 25.0,
             indicatorColor: Colors.white,
             tabBarIndicatorSize: TabBarIndicatorSize.tab,
@@ -141,13 +141,13 @@ class _HomePageState extends State<HomePage>
       ),
       body: TabBarView(
         controller: controller,
-        children: <Widget>[
-          const MainPage(),
+        children: const <Widget>[
+          MainPage(),
           OtherTabPage(
-            title: "Trendings",
+            title: "Trending",
           ),
           OtherTabPage(
-            title: "Populars",
+            title: "Popular",
           ),
           OtherTabPage(
             title: "Best publishers",
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage>
 }
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -188,36 +188,34 @@ class MainPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Container(
-                          child: Row(
-                            children: <Widget>[
-                              CircleAvatar(
-                                backgroundColor: Colors.black,
-                                backgroundImage:
-                                    AssetImage(posts[index]['userImage']!),
-                              ),
-                              const SizedBox(
-                                width: 15.0,
-                              ),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    posts[index]['username']!,
-                                    style: const TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.w400,
-                                    ),
+                        Row(
+                          children: <Widget>[
+                            CircleAvatar(
+                              backgroundColor: Colors.black,
+                              backgroundImage:
+                                  AssetImage(posts[index]['userImage']!),
+                            ),
+                            const SizedBox(
+                              width: 15.0,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  posts[index]['username']!,
+                                  style: const TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w400,
                                   ),
-                                  Text(
-                                    posts[index]['time']!,
-                                    style: const TextStyle(color: Colors.black54),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
+                                ),
+                                Text(
+                                  posts[index]['time']!,
+                                  style: const TextStyle(color: Colors.black54),
+                                ),
+                              ],
+                            )
+                          ],
                         ),
                         posts[index]['bookmarked'] == true
                             ? const Icon(
@@ -267,7 +265,7 @@ class MainPage extends StatelessWidget {
 
 class OtherTabPage extends StatelessWidget {
   final String title;
-  const OtherTabPage({Key? key, required this.title}) : super(key: key);
+  const OtherTabPage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
