@@ -110,46 +110,27 @@ class SeatScreenState extends State<SeatScreen> {
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 8.0, right: 8.0, top: 15.0),
-                    child: 
-                    // SizedBox(
-                    //   width: 350.0,
-                    //   child: RaisedButton(
-                    //     padding: const EdgeInsets.all(18.0),
-                    //     onPressed: () {
-                    //       Navigator.push(context,
-                    //           MaterialPageRoute(builder: ((context) {
-                    //         return TicketScreen();
-                    //       })));
-                    //     },
-                    //     color: Colors.pink,
-                    //     child: Text(
-                    //       'Purchase',
-                    //       style: TextStyle(color: Colors.white, fontSize: 16.0),
-                    //     ),
-                    //   ),
-                    // ),
-                    SizedBox(
-  width: 350.0,
-  child: ElevatedButton(
-    style: ElevatedButton.styleFrom(
-      padding: const EdgeInsets.all(18.0),
-      backgroundColor: Colors.pink, 
-    ),
-    onPressed: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) {
-          return TicketScreen();
-        }),
-      );
-    },
-    child: Text(
-      'Purchase',
-      style: TextStyle(color: Colors.white, fontSize: 16.0),
-    ),
-  ),
-),
-
+                    child: SizedBox(
+                      width: 350.0,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.all(18.0),
+                          backgroundColor: Colors.pink,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) {
+                              return TicketScreen();
+                            }),
+                          );
+                        },
+                        child: Text(
+                          'Purchase',
+                          style: TextStyle(color: Colors.white, fontSize: 16.0),
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
