@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TicketScreen extends StatelessWidget {
-  const TicketScreen({super.key});
+  final List<String> selectedSeats;
+  final String seatClass;
+
+  const TicketScreen({
+    super.key,
+    required this.selectedSeats,
+    required this.seatClass,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -149,19 +156,29 @@ class TicketScreen extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(30.0),
                                     border: Border.all(
-                                        width: 1.0, color: Colors.green),
+                                        width: 1.0,
+                                        color: seatClass == 'First Class'
+                                            ? Colors.purple
+                                            : seatClass == 'Business Class'
+                                                ? Colors.green
+                                                : Colors.blue),
                                   ),
                                   child: Center(
                                     child: Text(
-                                      'Business Class',
-                                      style: TextStyle(color: Colors.green),
+                                      seatClass,
+                                      style: TextStyle(
+                                          color: seatClass == 'First Class'
+                                              ? Colors.purple
+                                              : seatClass == 'Business Class'
+                                                  ? Colors.green
+                                                  : Colors.blue),
                                     ),
                                   ),
                                 ),
                                 Row(
                                   children: <Widget>[
                                     Text(
-                                      'SLM',
+                                      'STM',
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold),
@@ -189,7 +206,7 @@ class TicketScreen extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 20.0),
                               child: Text(
-                                '4 Flight Tickets',
+                                '${selectedSeats.length} Flight Ticket${selectedSeats.length > 1 ? 's' : ''}',
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 20.0,
@@ -200,8 +217,11 @@ class TicketScreen extends StatelessWidget {
                               padding: const EdgeInsets.only(top: 25.0),
                               child: Column(
                                 children: <Widget>[
-                                  ticketDetailsWidget('Passengers', 'Simona',
-                                      'Date', '24-12-2024'),
+                                  ticketDetailsWidget(
+                                      'Selected Seats',
+                                      selectedSeats.join(', '),
+                                      'Date',
+                                      '24-12-2024'),
                                   Padding(
                                     padding: const EdgeInsets.only(
                                         top: 12.0, right: 40.0),
@@ -212,7 +232,10 @@ class TicketScreen extends StatelessWidget {
                                     padding: const EdgeInsets.only(
                                         top: 12.0, right: 40.0),
                                     child: ticketDetailsWidget(
-                                        'Class', 'Business', 'Seat', '21B'),
+                                        'Class',
+                                        seatClass,
+                                        'Total Seats',
+                                        selectedSeats.length.toString()),
                                   ),
                                 ],
                               ),
