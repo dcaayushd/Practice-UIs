@@ -17,7 +17,8 @@ class FlightScreenState extends State<FlightScreen> {
   Color oneWayTextColor = Colors.grey;
   Color twoWayTextColor = Colors.white;
   bool value = true;
-  var classes = ["Business", "Economy"];
+  var classes = ["Economy", "Business", "First Class"];
+  String selectedClass = "Economy";
 
   @override
   void initState() {
@@ -436,20 +437,63 @@ class FlightScreenState extends State<FlightScreen> {
         style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
       ),
       subtitle: index == 3
-          ? DropdownButton<String>(
-              items: classes.map((String dropDownStringItem) {
-                return DropdownMenuItem<String>(
-                  value: dropDownStringItem,
-                  child: Text(dropDownStringItem),
-                );
-              }).toList(),
-              onChanged: (String? newItemSelected) {},
-              style: TextStyle(
-                color: Colors.grey,
-                fontWeight: FontWeight.bold,
-                fontSize: 16.0,
+          ? Container(
+              padding: const EdgeInsets.only(top: 4.0, right: 12.0),
+              child: DropdownButtonHideUnderline(
+                child: DropdownButton<String>(
+                  items: classes.map((String dropDownStringItem) {
+                    return DropdownMenuItem<String>(
+                      value: dropDownStringItem,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0,
+                          vertical: 8.0,
+                        ),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20.0),
+                          gradient: dropDownStringItem == selectedClass
+                              ? LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    Colors.blue[900]!,
+                                    Colors.blue[700]!
+                                  ],
+                                )
+                              : null,
+                          border: Border.all(color: Colors.grey.shade300),
+                        ),
+                        child: Text(
+                          dropDownStringItem,
+                          style: TextStyle(
+                            color: dropDownStringItem == selectedClass
+                                ? Colors.white
+                                : Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                  onChanged: (String? newItemSelected) {
+                    if (newItemSelected != null) {
+                      setState(() {
+                        selectedClass = newItemSelected;
+                      });
+                    }
+                  },
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.0,
+                  ),
+                  value: selectedClass,
+                  icon: Icon(Icons.arrow_drop_down, color: Colors.grey),
+                  isExpanded: true,
+                  dropdownColor: Colors.white,
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
               ),
-              value: classes[0],
             )
           : Text(
               subtitle!,
