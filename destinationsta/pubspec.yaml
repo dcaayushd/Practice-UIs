@@ -6,13 +6,27 @@ environment:
   sdk: ^3.6.0
 
 dependencies:
+  cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
 
 dev_dependencies:
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Light.otf
+        - asset: assets/fonts/Gilroy-ExtraBold.otf
+          weight: 700
+    - family: Cera Pro
+      fonts:
+        - asset: assets/fonts/CeraPro-Regular.ttf
+        - asset: assets/fonts/CeraPro-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/CeraPro-Medium.ttf
+          weight: 500
