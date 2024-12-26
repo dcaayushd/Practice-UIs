@@ -594,8 +594,8 @@ class ProductScreenState extends State<ProductScreen> {
   void initState() {
     super.initState();
     // Ensure system UI is configured for this screen
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: const Color(0xffE2F3D4),
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Color(0xffE2F3D4),
       statusBarBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.dark,
       systemNavigationBarColor: Colors.transparent,
@@ -615,7 +615,7 @@ class ProductScreenState extends State<ProductScreen> {
     final MediaQueryData mediaQuery = MediaQuery.of(context);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
+      value: const SystemUiOverlayStyle(
         // statusBarColor: const Color(0xffE2F3D4),
         statusBarColor: Colors.red,
         statusBarBrightness: Brightness.dark,

@@ -4,7 +4,7 @@ import 'package:memories_app/pages/listing_page.dart';
 import 'package:memories_app/utils/colors.dart';
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({Key? key}) : super(key: key);
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class LandingPage extends StatelessWidget {
                     height: 1.1,
                   ),
                 ),
-                Text(
+                const Text(
                   'Makes bond stronger',
                   style: TextStyle(
                     fontSize: 20,
@@ -53,7 +53,7 @@ class LandingPage extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ListingPage(),
+                        builder: (context) => const ListingPage(),
                       ),
                     );
                   },
@@ -65,7 +65,7 @@ class LandingPage extends StatelessWidget {
                       color: MemoriesColors.darkPinkColor,
                       borderRadius: BorderRadius.circular(13),
                     ),
-                    child: Column(
+                    child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(

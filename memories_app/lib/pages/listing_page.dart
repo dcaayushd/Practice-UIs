@@ -6,7 +6,7 @@ import 'package:memories_app/models/memories_model.dart';
 import 'package:memories_app/utils/colors.dart';
 
 class ListingPage extends StatefulWidget {
-  const ListingPage({Key? key}) : super(key: key);
+  const ListingPage({super.key});
 
   @override
   State<ListingPage> createState() => _ListingPageState();
@@ -25,14 +25,14 @@ class _ListingPageState extends State<ListingPage> {
               padding: const EdgeInsets.only(bottom: 100),
               children: [
                 Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
                         MemoriesColors.darkPinkColor,
                         MemoriesColors.darkPinkColor,
                         Colors.white,
                       ],
-                      stops: const [0.1, 0.2, 0.5],
+                      stops: [0.1, 0.2, 0.5],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                     ),
@@ -46,7 +46,7 @@ class _ListingPageState extends State<ListingPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
+                            SizedBox(
                               height: 20,
                               width: 30,
                               child: Column(
@@ -92,7 +92,7 @@ class _ListingPageState extends State<ListingPage> {
                                 ],
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               height: 35,
                               width: 35,
                               child: ClipRRect(
@@ -129,7 +129,7 @@ class _ListingPageState extends State<ListingPage> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
+                                    const Text(
                                       '25th Aug',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
@@ -147,7 +147,7 @@ class _ListingPageState extends State<ListingPage> {
                                         color: MemoriesColors.darkPinkColor,
                                         borderRadius: BorderRadius.circular(9),
                                       ),
-                                      child: Column(
+                                      child: const Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
@@ -173,7 +173,7 @@ class _ListingPageState extends State<ListingPage> {
                               child: Transform.scale(
                                 scale: .91,
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     bottomRight: Radius.circular(15),
                                   ),
                                   child: Image.asset(
@@ -206,15 +206,15 @@ class _ListingPageState extends State<ListingPage> {
                         margin: const EdgeInsets.symmetric(horizontal: 30),
                         child: TextField(
                           decoration: InputDecoration(
-                            prefixIcon: Icon(Icons.search),
+                            prefixIcon: const Icon(Icons.search),
                             hintText: 'Search for Memories',
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               color: MemoriesColors.lightBrownColor,
                               fontSize: 16,
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.brown,
                                 width: 3,
                               ),
@@ -225,8 +225,8 @@ class _ListingPageState extends State<ListingPage> {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 30),
                         child: Text(
                           'Trending',
                           style: TextStyle(
@@ -237,13 +237,13 @@ class _ListingPageState extends State<ListingPage> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      MemoriesListViewWidget(),
+                      const MemoriesListViewWidget(),
                     ],
                   ),
                 ),
                 const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
                   child: Text(
                     'Memories and communities',
                     style: TextStyle(
@@ -285,12 +285,12 @@ class _ListingPageState extends State<ListingPage> {
                       });
                     },
                     child: AnimatedContainer(
-                      duration: Duration(milliseconds: 250),
+                      duration: const Duration(milliseconds: 250),
                       decoration: BoxDecoration(
                         color: _selectedIndex == 0
                             ? MemoriesColors.darkPinkColor
                             : MemoriesColors.lightWhiteColor,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                       ),
                       padding: const EdgeInsets.symmetric(
                         vertical: 10,
@@ -320,12 +320,12 @@ class _ListingPageState extends State<ListingPage> {
                           });
                         },
                         child: AnimatedContainer(
-                          duration: Duration(milliseconds: 250),
+                          duration: const Duration(milliseconds: 250),
                           decoration: BoxDecoration(
                             color: _selectedIndex == 1
                                 ? MemoriesColors.darkPinkColor
                                 : MemoriesColors.lightWhiteColor,
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderRadius: const BorderRadius.all(Radius.circular(10)),
                           ),
                           padding: const EdgeInsets.symmetric(
                             vertical: 10,
@@ -356,12 +356,12 @@ class _ListingPageState extends State<ListingPage> {
                       });
                     },
                     child: AnimatedContainer(
-                      duration: Duration(milliseconds: 250),
+                      duration: const Duration(milliseconds: 250),
                       decoration: BoxDecoration(
                         color: _selectedIndex == 2
                             ? MemoriesColors.darkPinkColor
                             : MemoriesColors.lightWhiteColor,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        borderRadius: const BorderRadius.all(Radius.circular(10)),
                       ),
                       padding: const EdgeInsets.symmetric(
                         vertical: 10,
@@ -434,7 +434,7 @@ class MemoriesListViewWidget extends StatelessWidget {
                   children: [
                     Text(
                       model.title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 21,
                         fontWeight: FontWeight.w600,
                         color: MemoriesColors.darkBrownColor,
@@ -446,7 +446,7 @@ class MemoriesListViewWidget extends StatelessWidget {
                       children: [
                         Text(
                           '${model.memoriesCount} memories made',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
                             color: MemoriesColors.darkBrownColor,
@@ -455,7 +455,7 @@ class MemoriesListViewWidget extends StatelessWidget {
                         ),
                         Container(
                           height: 27,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: MemoriesColors.lightGreenColor,
                             borderRadius: BorderRadius.all(Radius.circular(7)),
                           ),
@@ -463,7 +463,7 @@ class MemoriesListViewWidget extends StatelessWidget {
                           alignment: Alignment.center,
                           child: Text(
                             '\$${model.price}',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
                               color: MemoriesColors.darkBrownColor,

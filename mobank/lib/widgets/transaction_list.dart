@@ -33,7 +33,7 @@ class TransactionList extends StatelessWidget {
             title: Text("Gym"),
             subtitle: Text("Payment"),
             trailing: Text(
-              "-\Rs.45.99",
+              "-Rs.45.99",
               style: TextStyle(color: Colors.red),
             ),
           ),
@@ -51,7 +51,7 @@ class TransactionList extends StatelessWidget {
             title: Text("Global Ime Bank"),
             subtitle: Text("Deposit"),
             trailing: Text(
-              "+\Rs.1,328.00",
+              "+Rs.1,328.00",
               style: TextStyle(color: Colors.teal),
             ),
           ),
@@ -69,7 +69,7 @@ class TransactionList extends StatelessWidget {
             title: Text("To Shyam Kumar"),
             subtitle: Text("Sent"),
             trailing: Text(
-              "-\Rs.699.00",
+              "-Rs.699.00",
               style: TextStyle(color: Colors.red),
             ),
           )

@@ -7,8 +7,7 @@ class FlowerDetailsPage extends StatelessWidget {
   final String assetPath;
   final String tag;
   const FlowerDetailsPage(
-      {required this.tag, required this.assetPath, Key? key})
-      : super(key: key);
+      {required this.tag, required this.assetPath, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -49,12 +48,12 @@ class FlowerDetailsPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Positioned.fill(
+                          const Positioned.fill(
                             child: Row(
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: const EdgeInsets.only(right: 5),
+                                    padding: EdgeInsets.only(right: 5),
                                     child: Icon(
                                       CupertinoIcons.arrow_left,
                                       color: Colors.black,
@@ -62,7 +61,7 @@ class FlowerDetailsPage extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(width: 6),
+                                SizedBox(width: 6),
                                 Expanded(
                                   child: Text(
                                     'Go Back',
@@ -89,7 +88,7 @@ class FlowerDetailsPage extends StatelessWidget {
                         ),
                         borderRadius: BorderRadius.circular(70),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.more_vert_rounded,
                         color: Colors.black,
                         size: 23,
@@ -133,7 +132,7 @@ class FlowerDetailsPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 'Good growth',
                                 style: TextStyle(
                                   fontSize: 22,
@@ -174,7 +173,7 @@ class FlowerDetailsPage extends StatelessWidget {
                       right: 0,
                       child: Container(
                         height: 110,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: PlantsColor.greenColor,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(50),
@@ -182,7 +181,7 @@ class FlowerDetailsPage extends StatelessWidget {
                           ),
                         ),
                         padding: const EdgeInsets.only(top: 17),
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -191,7 +190,7 @@ class FlowerDetailsPage extends StatelessWidget {
                               color: Colors.black38,
                               size: 25,
                             ),
-                            const SizedBox(width: 8),
+                            SizedBox(width: 8),
                             Text(
                               'Scan your plant',
                               style: TextStyle(
@@ -210,7 +209,7 @@ class FlowerDetailsPage extends StatelessWidget {
                       right: 0,
                       child: Container(
                         height: 120,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(50),
@@ -222,7 +221,7 @@ class FlowerDetailsPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text(
+                            const Text(
                               'Artificial\nMaze',
                               style: TextStyle(
                                 color: Colors.black,
@@ -317,7 +316,7 @@ class FlowerFeatureWidget extends StatelessWidget {
             children: [
               Text(
                 features.title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: Colors.black54,
                   fontWeight: FontWeight.w700,
@@ -326,7 +325,7 @@ class FlowerFeatureWidget extends StatelessWidget {
               ),
               Text(
                 features.value,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 21,
                   color: Colors.black,
                   fontWeight: FontWeight.w700,

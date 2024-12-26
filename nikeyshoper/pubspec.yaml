@@ -8,6 +8,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    smooth_page_indicator: ^1.2.0+3
+    dio: ^5.7.0
+    intl: ^0.20.1
 
 dev_dependencies:
   flutter_test:

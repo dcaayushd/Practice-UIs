@@ -4,7 +4,7 @@ import 'package:mingleefy/models/artist_model.dart';
 import 'package:mingleefy/widgets/feed_display_widget.dart';
 
 class FeedTab extends StatefulWidget {
-  const FeedTab({Key? key}) : super(key: key);
+  const FeedTab({super.key});
 
   @override
   State<FeedTab> createState() => _FeedTabState();
@@ -19,7 +19,7 @@ class _FeedTabState extends State<FeedTab> {
         padding:
             const EdgeInsets.only(top: 60, left: 25, right: 25, bottom: 140),
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
@@ -32,7 +32,7 @@ class _FeedTabState extends State<FeedTab> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  SizedBox(width: 12),
                   Icon(
                     CupertinoIcons.chevron_down,
                     color: Colors.black,

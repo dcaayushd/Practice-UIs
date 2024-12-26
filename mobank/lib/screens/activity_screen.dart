@@ -104,7 +104,7 @@ class ActivityScreen extends StatelessWidget {
               ),
               const SizedBox(height: 25),
               Container(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 width: double.maxFinite,
                 height: 350,
                 decoration: BoxDecoration(
@@ -123,7 +123,7 @@ class ActivityScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     const Text(
-                      "\Rs.6,345.00",
+                      "Rs.6,345.00",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -135,9 +135,9 @@ class ActivityScreen extends StatelessWidget {
                     Expanded(
                       child: LineChart(
                         LineChartData(
-                          gridData: FlGridData(show: false),
+                          gridData: const FlGridData(show: false),
                           titlesData: FlTitlesData(
-                            leftTitles: AxisTitles(
+                            leftTitles: const AxisTitles(
                               sideTitles: SideTitles(showTitles: false),
                             ),
                             bottomTitles: AxisTitles(
@@ -244,7 +244,7 @@ class ActivityScreen extends StatelessWidget {
                     ),
                     subtitle: Text("www.youtube.com"),
                     trailing: Text(
-                      "-\Rs.449.99",
+                      "-Rs.449.99",
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
                           fontSize: 14,

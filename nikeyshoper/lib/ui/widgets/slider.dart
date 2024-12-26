@@ -41,7 +41,7 @@ class BannerSlider extends StatelessWidget {
                       strokeWidth: 1.5,
                       dotColor: Colors.grey.shade400,
                       activeDotColor:
-                          Theme.of(context).colorScheme.onBackground),
+                          Theme.of(context).colorScheme.onSurface),
                 ),
               ),
             )

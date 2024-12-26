@@ -81,7 +81,7 @@ class Section2 extends StatelessWidget {
                                               ),
                                             )
                                           ],
-                                        ), textScaler: TextScaler.linear(1.3),
+                                        ), textScaler: const TextScaler.linear(1.3),
                                       ),
                                     ),
                                     SizedBox(height: h * 0.015),

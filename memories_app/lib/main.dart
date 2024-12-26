@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const LandingPage(),
+    return const MaterialApp(
+      home: LandingPage(),
     );
   }
 }

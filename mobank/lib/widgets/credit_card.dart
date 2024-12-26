@@ -62,7 +62,7 @@ class CreditCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        '\Rs.13,250.00',
+                        'Rs.13,250.00',
                         style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,

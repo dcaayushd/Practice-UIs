@@ -64,9 +64,9 @@ class _TopUpBottomSheetState extends State<TopUpBottomSheet> {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
               ),
-              Text(
-                "\Rs. Rs.{amount.toStringAsFixed(0)}",
-                style: const TextStyle(
+              const Text(
+                "Rs. Rs.{amount.toStringAsFixed(0)}",
+                style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -118,7 +118,7 @@ class _TopUpBottomSheetState extends State<TopUpBottomSheet> {
                         color: amount == value ? const Color.fromARGB(255, 16, 80, 98) : Colors.grey[100],
                         borderRadius: BorderRadius.circular(12)),
                     child: Text(
-                      '\Rs.Rs.value',
+                      'Rs.Rs.value',
                       style: TextStyle(
                           color: amount == value ? Colors.white : Colors.black,
                           fontWeight: FontWeight.w600,

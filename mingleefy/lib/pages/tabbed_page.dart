@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mingleefy/pages/tabs/feed_tab.dart';
 
 class TabbedPage extends StatefulWidget {
-  const TabbedPage({Key? key}) : super(key: key);
+  const TabbedPage({super.key});
 
   @override
   _TabbedPageState createState() => _TabbedPageState();
@@ -17,7 +17,7 @@ class _TabbedPageState extends State<TabbedPage> {
       backgroundColor: Colors.grey.shade200,
       body: Stack(
         children: [
-          Positioned.fill(
+          const Positioned.fill(
             child: IndexedStack(
               children: [
                 FeedTab(),
@@ -79,7 +79,7 @@ class _TabbedPageState extends State<TabbedPage> {
                       color: Colors.grey.shade200,
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(Icons.diamond_rounded, size: 38),
+                    child: const Icon(Icons.diamond_rounded, size: 38),
                   ),
                   GestureDetector(
                     behavior: HitTestBehavior.translucent,

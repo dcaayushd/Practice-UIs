@@ -5,7 +5,7 @@ import 'package:plantshop/pages/flower_details_page.dart';
 import 'package:plantshop/utils/colors.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -26,14 +26,14 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(
                   top: 135, left: 3, right: 3, bottom: 110),
               children: [
-                Text(
+                const Text(
                   'Manage Your',
                   style: TextStyle(
                       fontSize: 37, fontWeight: FontWeight.bold, height: 1),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 5),
-                Text(
+                const Text(
                   'Home Plants',
                   style: TextStyle(
                     fontSize: 30,
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 260,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: PlantsColor.greenColor,
                     ),
                     child: Row(
@@ -91,9 +91,9 @@ class _HomePageState extends State<HomePage> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         const SizedBox(height: 10),
-                                        Padding(
+                                        const Padding(
                                           padding:
-                                              const EdgeInsets.only(left: 10),
+                                              EdgeInsets.only(left: 10),
                                           child: Text(
                                             'Succulent',
                                             style: TextStyle(
@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                                                 ),
                                               ],
                                             ),
-                                            child: Icon(
+                                            child: const Icon(
                                               CupertinoIcons.thermometer_sun,
                                               color: PlantsColor.greenColor,
                                               size: 18,
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                                                   letterSpacing: -1,
                                                 ),
                                               ),
-                                              Text(
+                                              const Text(
                                                 '24°C',
                                                 style: TextStyle(
                                                   fontSize: 20,
@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                                   padding: const EdgeInsets.only(left: 22),
                                   child: Row(
                                     children: [
-                                      Icon(
+                                      const Icon(
                                         CupertinoIcons.lightbulb,
                                         color: Colors.white,
                                         size: 26,
@@ -214,7 +214,7 @@ class _HomePageState extends State<HomePage> {
                                               letterSpacing: -1,
                                             ),
                                           ),
-                                          Text(
+                                          const Text(
                                             '64%',
                                             style: TextStyle(
                                               fontSize: 20,
@@ -388,7 +388,7 @@ class _HomePageState extends State<HomePage> {
                                       isMessages = !isMessages;
                                     });
                                   },
-                                  child: Icon(
+                                  child: const Icon(
                                     CupertinoIcons.text_bubble,
                                     color: Colors.black,
                                     size: 20,
@@ -404,7 +404,7 @@ class _HomePageState extends State<HomePage> {
                                       isMessages = !isMessages;
                                     });
                                   },
-                                  child: Icon(
+                                  child: const Icon(
                                     CupertinoIcons.cloud,
                                     color: Colors.black,
                                     size: 20,
@@ -609,7 +609,7 @@ class FlowerWidget extends StatelessWidget {
               padding: const EdgeInsets.only(left: 17),
               child: Text(
                 flower.name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,

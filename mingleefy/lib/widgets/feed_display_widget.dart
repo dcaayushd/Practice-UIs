@@ -4,7 +4,7 @@ import 'package:mingleefy/models/artist_model.dart';
 
 class FeedDisplayWidget extends StatefulWidget {
   final ArtistModel artist;
-  const FeedDisplayWidget({required this.artist, Key? key}) : super(key: key);
+  const FeedDisplayWidget({required this.artist, super.key});
 
   @override
   _FeedDisplayWidgetState createState() => _FeedDisplayWidgetState();
@@ -32,7 +32,7 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
         child: Container(
           height: 480,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
           ),
           child: Column(
@@ -42,7 +42,7 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
                 child: Container(
                   height: 390,
                   width: double.infinity,
-                  decoration: BoxDecoration(),
+                  decoration: const BoxDecoration(),
                   child: Stack(
                     children: [
                       Positioned.fill(
@@ -119,7 +119,7 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
                                 color: Colors.black.withOpacity(0.2),
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 CupertinoIcons.arrowshape_turn_up_right,
                                 color: Colors.white,
                                 size: 25,
@@ -146,7 +146,7 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
                           children: [
                             Text(
                               '@${widget.artist.artistUID}',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 17,
                                 fontWeight: FontWeight.w700,
@@ -154,14 +154,14 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
                             ),
                             Row(
                               children: [
-                                Icon(
+                                const Icon(
                                   CupertinoIcons.chat_bubble,
                                   color: Colors.black,
                                   size: 20,
                                 ),
                                 Text(
                                   ' ${widget.artist.commentsCount}',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
@@ -197,7 +197,7 @@ class _FeedDisplayWidgetState extends State<FeedDisplayWidget> {
                               widget.artist.description,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,

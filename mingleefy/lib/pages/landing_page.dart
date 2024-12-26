@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mingleefy/pages/tabbed_page.dart';
 
 class LandingPage extends StatelessWidget {
-  const LandingPage({Key? key}) : super(key: key);
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,18 +13,18 @@ class LandingPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
+            const Column(
               children: [
-                const SizedBox(height: 60),
+                SizedBox(height: 60),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.diamond,
                       size: 40,
                     ),
-                    const SizedBox(width: 10),
-                    const Text(
+                    SizedBox(width: 10),
+                    Text(
                       'MiNGLE',
                       style: TextStyle(
                         fontSize: 27,
@@ -33,8 +33,8 @@ class LandingPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 15),
-                const Text(
+                SizedBox(height: 15),
+                Text(
                   'Post photos and videos to your friends!\nFind new interesting friends 🫰',
                   style: TextStyle(
                     fontSize: 20,
@@ -101,7 +101,7 @@ class LandingPage extends StatelessWidget {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TabbedPage(),
+                    builder: (context) => const TabbedPage(),
                   ),
                 );
               },
@@ -113,7 +113,7 @@ class LandingPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(40),
                 ),
                 alignment: Alignment.center,
-                child: Text(
+                child: const Text(
                   'Create account',
                   style: TextStyle(
                     color: Colors.white,

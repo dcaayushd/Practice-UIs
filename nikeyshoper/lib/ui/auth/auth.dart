@@ -31,13 +31,13 @@ class _AuthScreenState extends State<AuthScreen> {
                 backgroundColor: Theme.of(context).colorScheme.primary),
             elevatedButtonTheme: ElevatedButtonThemeData(
                 style: ButtonStyle(
-                    minimumSize: MaterialStateProperty.all(
+                    minimumSize: WidgetStateProperty.all(
                       const Size.fromHeight(56),
                     ),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    shape: WidgetStateProperty.all(RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12))),
-                    backgroundColor: MaterialStateProperty.all(onBackground),
-                    foregroundColor: MaterialStateProperty.all(
+                    backgroundColor: WidgetStateProperty.all(onBackground),
+                    foregroundColor: WidgetStateProperty.all(
                         themeData.colorScheme.secondary))),
             colorScheme:
                 themeData.colorScheme.copyWith(onSurface: onBackground),

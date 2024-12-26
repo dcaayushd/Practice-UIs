@@ -62,7 +62,7 @@ class LandingScreenState extends State<LandingScreen> {
   void initState() {
     super.initState();
     SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
+      const SystemUiOverlayStyle(
         // statusBarColor: Colors.transparent,
         statusBarColor: Color(0xffE2F3D4),
 

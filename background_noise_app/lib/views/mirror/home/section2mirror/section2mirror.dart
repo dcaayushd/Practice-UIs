@@ -90,7 +90,7 @@ class Section2Mirror extends StatelessWidget {
                                                 ),
                                               )
                                             ],
-                                          ), textScaler: TextScaler.linear(1.3),
+                                          ), textScaler: const TextScaler.linear(1.3),
                                         ),
                                       ),
                                     ),
