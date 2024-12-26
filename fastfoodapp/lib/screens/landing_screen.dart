@@ -4,6 +4,7 @@ import 'package:fastfoodapp/screens/product_item.dart';
 import 'package:fastfoodapp/screens/product_screen.dart';
 import 'package:fastfoodapp/utils/constants.dart';
 import 'package:fastfoodapp/utils/widget_functions.dart';
+import 'package:flutter/services.dart';
 
 const productData = [
   {
@@ -57,6 +58,21 @@ class LandingScreen extends StatefulWidget {
 
 class LandingScreenState extends State<LandingScreen> {
   final FocusNode _focusNode = FocusNode();
+  @override
+  void initState() {
+    super.initState();
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        // statusBarColor: Colors.transparent,
+        statusBarColor: Color(0xffE2F3D4),
+
+        statusBarBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: Colors.white,
+        systemNavigationBarIconBrightness: Brightness.dark,
+      ),
+    );
+  }
 
   @override
   void dispose() {

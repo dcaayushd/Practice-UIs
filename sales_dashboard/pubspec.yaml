@@ -7,8 +7,11 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.8
+  fl_chart: ^0.69.1
   flutter:
     sdk: flutter
+  font_awesome_flutter: ^10.8.0
+  window_manager: ^0.4.3
 
 dev_dependencies:
   flutter_lints: ^4.0.0
