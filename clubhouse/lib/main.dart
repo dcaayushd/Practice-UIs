@@ -156,18 +156,34 @@ class _Room extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 20.0),
-                      Text("user0 💬",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500)),
-                      Text("user2 💬",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500)),
-                      Text("user3 💬",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500)),
-                      Text("John Doe 💬",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w500)),
+                      Text(
+                        "user0 💬",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "user2 💬",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "user3 💬",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        "John Doe 💬",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                       const SizedBox(height: 8.0),
                       Text("$users / $talking"),
                     ],
