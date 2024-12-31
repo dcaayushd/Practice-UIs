@@ -63,7 +63,10 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Align(alignment: Alignment.bottomCenter, child: _BottomBar()),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: _BottomBar(),
+            ),
           ],
         ),
       ),

@@ -111,7 +111,8 @@ class _MainView extends StatelessWidget {
               child: GridView.builder(
                 itemCount: 12,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
+                  crossAxisCount: 3,
+                ),
                 itemBuilder: (_, index) => _User(
                   name: "user$index",
                   image: "assets/user$index.jpeg",
