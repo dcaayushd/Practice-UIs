@@ -38,8 +38,11 @@ class _TopBar extends StatelessWidget {
               children: [
                 RotatedBox(
                   quarterTurns: -1,
-                  child:
-                      Icon(Icons.chevron_left, color: Colors.black, size: 40.0),
+                  child: Icon(
+                    Icons.chevron_left,
+                    color: Colors.black,
+                    size: 40.0,
+                  ),
                 ),
                 Text(
                   "All rooms",
@@ -93,17 +96,25 @@ class _MainView extends StatelessWidget {
           children: [
             const SizedBox(height: 24.0),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 24.0,
+                vertical: 16.0,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     "Welcome to clubhouse 🎉",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
+                    ),
                   ),
-                  Icon(Icons.more_horiz, color: Colors.black, size: 35.0),
+                  Icon(
+                    Icons.more_horiz,
+                    color: Colors.black,
+                    size: 35.0,
+                  ),
                 ],
               ),
             ),
@@ -159,7 +170,11 @@ class _BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 60.0, left: 16.0, right: 16.0),
+      padding: const EdgeInsets.only(
+        bottom: 60.0,
+        left: 16.0,
+        right: 16.0,
+      ),
       child: SizedBox(
         height: 90.0,
         child: Row(
