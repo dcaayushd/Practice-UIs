@@ -644,9 +644,10 @@ class HomePage extends StatelessWidget {
                 reviews: '8.2M',
                 icon: 'assets/tg.png',
                 screenshots: [
-                  'assets/tg.png',
-                  'assets/tg.png',
-                  'assets/tg.png',
+                  'assets/tg_1.png',
+                  'assets/tg_2.png',
+                  'assets/tg_3.png',
+                  'assets/tg_4.png',
                 ],
               ),
               const SizedBox(width: 20),
@@ -836,48 +837,48 @@ class _MessagingAppCard extends StatelessWidget {
   }
 }
 
-Widget _buildArcadeSection() {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      const Text(
-        'Apple Arcade',
-        style: TextStyle(
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
-          color: CupertinoColors.white,
-        ),
-      ),
-      const SizedBox(height: 16),
-      ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          color: const Color(0xFF1C1C1E),
-          child: Column(
-            children: [
-              _ArcadeListItem(
-                icon: 'assets/cr.png',
-                title: 'Clash Royale',
-                category: 'Strategy',
-              ),
-              _ArcadeListItem(
-                icon: 'assets/poke.png',
-                title: 'Pokemon Go',
-                category: 'Adventure',
-              ),
-              _ArcadeListItem(
-                icon: 'assets/ab.png',
-                title: 'Angry Birds',
-                category: 'Puzzle',
-                showDivider: false,
-              ),
-            ],
-          ),
-        ),
-      ),
-    ],
-  );
-}
+// Widget _buildArcadeSection() {
+//   return Column(
+//     crossAxisAlignment: CrossAxisAlignment.start,
+//     children: [
+//       const Text(
+//         'Apple Arcade',
+//         style: TextStyle(
+//           fontSize: 24,
+//           fontWeight: FontWeight.bold,
+//           color: CupertinoColors.white,
+//         ),
+//       ),
+//       const SizedBox(height: 16),
+//       ClipRRect(
+//         borderRadius: BorderRadius.circular(12),
+//         child: Container(
+//           color: const Color(0xFF1C1C1E),
+//           child: Column(
+//             children: [
+//               _ArcadeListItem(
+//                 icon: 'assets/cr.png',
+//                 title: 'Clash Royale',
+//                 category: 'Strategy',
+//               ),
+//               _ArcadeListItem(
+//                 icon: 'assets/poke.png',
+//                 title: 'Pokemon Go',
+//                 category: 'Adventure',
+//               ),
+//               _ArcadeListItem(
+//                 icon: 'assets/ab.png',
+//                 title: 'Angry Birds',
+//                 category: 'Puzzle',
+//                 showDivider: false,
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     ],
+//   );
+// }
 
 class _FeaturedCard extends StatelessWidget {
   final String tag;
