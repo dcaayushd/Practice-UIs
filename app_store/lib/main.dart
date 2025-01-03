@@ -661,6 +661,7 @@ class HomePage extends StatelessWidget {
                   'assets/sg_1.png',
                   'assets/sg_2.png',
                   'assets/sg_3.png',
+                  'assets/sg_4.png',
                 ],
               ),
             ],
