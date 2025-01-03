@@ -631,8 +631,9 @@ class HomePage extends StatelessWidget {
                 icon: 'assets/wa.png',
                 screenshots: [
                   'assets/wa_1.png',
-                  'assets/wa.png',
-                  'assets/wa.png',
+                  'assets/wa_2.png',
+                  'assets/wa_3.png',
+                  'assets/wa_4.png',
                 ],
               ),
               const SizedBox(width: 20),
