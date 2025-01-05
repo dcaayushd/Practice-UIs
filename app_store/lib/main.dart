@@ -166,7 +166,7 @@ class _GameCard extends StatelessWidget {
           Text(
             'Action',
             style: TextStyle(
-              color: CupertinoColors.white.withOpacity(0.6),
+              color: CupertinoColors.white.withAlpha(153),
               fontSize: 14,
             ),
           ),
@@ -267,7 +267,7 @@ class _AppListItem extends StatelessWidget {
           Text(
             '$index',
             style: TextStyle(
-              color: CupertinoColors.white.withOpacity(0.6),
+              color: CupertinoColors.white.withAlpha(153),
               fontSize: 16,
             ),
           ),
@@ -300,7 +300,7 @@ class _AppListItem extends StatelessWidget {
                 Text(
                   'Category',
                   style: TextStyle(
-                    color: CupertinoColors.white.withOpacity(0.6),
+                    color: CupertinoColors.white.withAlpha(153),
                     fontSize: 14,
                   ),
                 ),
@@ -409,7 +409,7 @@ class _UpdateItem extends StatelessWidget {
                     Text(
                       'Updated 2 days ago',
                       style: TextStyle(
-                        color: CupertinoColors.white.withOpacity(0.6),
+                        color: CupertinoColors.white.withAlpha(153),
                         fontSize: 14,
                       ),
                     ),
@@ -430,7 +430,7 @@ class _UpdateItem extends StatelessWidget {
           Text(
             'What\'s New',
             style: TextStyle(
-              color: CupertinoColors.white.withOpacity(0.6),
+              color: CupertinoColors.white.withAlpha(153),
               fontSize: 14,
               fontWeight: FontWeight.w500,
             ),
@@ -614,7 +614,7 @@ class HomePage extends StatelessWidget {
                   Text(
                     'FRIDAY 14 MAY',
                     style: TextStyle(
-                      color: CupertinoColors.white.withOpacity(0.6),
+                      color: CupertinoColors.white.withAlpha(153),
                       fontSize: 13,
                       letterSpacing: 0.5,
                     ),
@@ -923,7 +923,7 @@ class _FeaturedCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: CupertinoColors.black.withOpacity(0.1),
+            color: CupertinoColors.black.withAlpha(26),
             blurRadius: 10,
             offset: const Offset(0, 5),
           ),
@@ -941,7 +941,7 @@ class _FeaturedCard extends StatelessWidget {
                 image: AssetImage(image),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
-                  CupertinoColors.black.withOpacity(0.2),
+                  CupertinoColors.black.withAlpha(51),
                   BlendMode.darken,
                 ),
               ),
@@ -974,7 +974,7 @@ class _FeaturedCard extends StatelessWidget {
                 Text(
                   description,
                   style: TextStyle(
-                    color: CupertinoColors.white.withOpacity(0.8),
+                    color: CupertinoColors.white.withAlpha(204),
                     fontSize: 15,
                   ),
                 ),
@@ -1005,7 +1005,7 @@ class _FeaturedCard extends StatelessWidget {
                       Text(
                         category,
                         style: TextStyle(
-                          color: CupertinoColors.white.withOpacity(0.6),
+                          color: CupertinoColors.white.withAlpha(153),
                           fontSize: 14,
                         ),
                       ),
@@ -1079,7 +1079,7 @@ class _ArcadeListItem extends StatelessWidget {
                     Text(
                       subtitle,
                       style: TextStyle(
-                        color: CupertinoColors.white.withOpacity(0.6),
+                        color: CupertinoColors.white.withAlpha(153),
                         fontSize: 14,
                       ),
                     ),
@@ -1109,7 +1109,7 @@ class _ArcadeListItem extends StatelessWidget {
         if (showDivider)
           Divider(
             height: 1,
-            color: CupertinoColors.white.withOpacity(0.1),
+            color: CupertinoColors.black.withAlpha(26),
             indent: 78,
           ),
       ],
@@ -1181,7 +1181,7 @@ class AppDetailsPage extends StatelessWidget {
                 app.developer,
                 style: TextStyle(
                   fontSize: 16,
-                  color: CupertinoColors.white.withOpacity(0.6),
+                  color: CupertinoColors.white.withAlpha(153),
                 ),
               ),
               const SizedBox(height: 12),
@@ -1252,7 +1252,7 @@ class AppDetailsPage extends StatelessWidget {
           app.description,
           style: TextStyle(
             fontSize: 16,
-            color: CupertinoColors.white.withOpacity(0.8),
+            color: CupertinoColors.white.withAlpha(204),
           ),
         ),
       ],
@@ -1286,7 +1286,7 @@ class AppDetailsPage extends StatelessWidget {
                     feature,
                     style: TextStyle(
                       fontSize: 16,
-                      color: CupertinoColors.white.withOpacity(0.8),
+                      color: CupertinoColors.white.withAlpha(204),
                     ),
                   ),
                 ],
@@ -1354,7 +1354,7 @@ class _InfoRow extends StatelessWidget {
               Text(
                 value,
                 style: TextStyle(
-                  color: CupertinoColors.white.withOpacity(0.6),
+                  color: CupertinoColors.white.withAlpha(153),
                   fontSize: 16,
                 ),
               ),
@@ -1364,7 +1364,7 @@ class _InfoRow extends StatelessWidget {
         if (showDivider)
           Divider(
             height: 1,
-            color: CupertinoColors.white.withOpacity(0.1),
+            color: CupertinoColors.black.withAlpha(26),
             indent: 16,
             endIndent: 16,
           ),
@@ -1466,7 +1466,7 @@ class _AppCard extends StatelessWidget {
                       Text(
                         category,
                         style: TextStyle(
-                          color: CupertinoColors.white.withOpacity(0.6),
+                          color: CupertinoColors.white.withAlpha(153),
                           fontSize: 14,
                         ),
                       ),
@@ -1508,13 +1508,13 @@ class _AppCard extends StatelessWidget {
                 Icon(
                   CupertinoIcons.star_fill,
                   size: 12,
-                  color: CupertinoColors.white.withOpacity(0.6),
+                  color: CupertinoColors.white.withAlpha(153),
                 ),
                 const SizedBox(width: 4),
                 Text(
                   '($reviews)',
                   style: TextStyle(
-                    color: CupertinoColors.white.withOpacity(0.6),
+                    color: CupertinoColors.white.withAlpha(153),
                     fontSize: 14,
                   ),
                 ),
