@@ -70,7 +70,6 @@ class TabScaffold extends StatelessWidget {
   }
 }
 
-// Add new pages
 class GamesPage extends StatelessWidget {
   const GamesPage({super.key});
 
