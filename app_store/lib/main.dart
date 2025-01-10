@@ -970,7 +970,6 @@ class _FeaturedCard extends StatelessWidget {
     );
   }
 }
-
 class _ArcadeListItem extends StatelessWidget {
   final String icon;
   final String title;
@@ -986,66 +985,92 @@ class _ArcadeListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(icon, height: 50, width: 50),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        color: CupertinoColors.white,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
+    return GestureDetector(
+      onTap: () {
+        final appDetails = AppDetails(
+          name: title,
+          category: subtitle,
+          developer: 'Apple Arcade',
+          rating: 4.5,
+          reviews: '2.5K',
+          description: 'An exclusive Apple Arcade game that brings endless entertainment.',
+          icon: icon,
+          screenshots: ['assets/arcade_1.png', 'assets/arcade_2.png', 'assets/arcade_3.png'],
+          features: ['No Ads', 'No In-App Purchases', 'Family Sharing'],
+          size: '1.2 GB',
+          age: '4+',
+          languages: ['English', 'Spanish', 'French', 'German'],
+          inAppPurchases: false,
+        );
+
+        Navigator.push(
+          context,
+          CupertinoPageRoute(
+            builder: (context) => AppDetailsPage(app: appDetails),
+          ),
+        );
+      },
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(icon, height: 50, width: 50),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: const TextStyle(
+                          color: CupertinoColors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
                       ),
-                    ),
-                    Text(
-                      subtitle,
-                      style: TextStyle(
-                        color: CupertinoColors.white.withAlpha(153),
-                        fontSize: 14,
+                      Text(
+                        subtitle,
+                        style: TextStyle(
+                          color: CupertinoColors.white.withAlpha(153),
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 8,
-                ),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF2C2C2E),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Text(
-                  'GET',
-                  style: TextStyle(
-                    color: CupertinoColors.activeBlue,
-                    fontWeight: FontWeight.w600,
+                    ],
                   ),
                 ),
-              ),
-            ],
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 8,
+                  ),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF2C2C2E),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    'GET',
+                    style: TextStyle(
+                      color: CupertinoColors.activeBlue,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        if (showDivider)
-          Divider(
-            height: 1,
-            color: CupertinoColors.black.withAlpha(26),
-            indent: 78,
-          ),
-      ],
+          if (showDivider)
+            Divider(
+              height: 1,
+              color: CupertinoColors.black.withAlpha(26),
+              indent: 78,
+            ),
+        ],
+      ),
     );
   }
 }
