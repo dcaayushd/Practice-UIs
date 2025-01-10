@@ -1063,33 +1063,38 @@ class AppDetailsPage extends StatelessWidget {
         backgroundColor: CupertinoColors.black,
         border: null,
       ),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildHeader(),
-                  const SizedBox(height: 20),
-                  _buildScreenshots(),
-                  const SizedBox(height: 20),
-                  _buildDescription(),
-                  const SizedBox(height: 20),
-                  _buildFeatures(),
-                  const SizedBox(height: 20),
-                  _buildInformation(),
-                ],
+      child: Stack(
+        children: [
+          CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildHeader(context),
+                      const SizedBox(height: 20),
+                      _buildScreenshots(),
+                      const SizedBox(height: 20),
+                      _buildDescription(),
+                      const SizedBox(height: 20),
+                      _buildFeatures(),
+                      const SizedBox(height: 20),
+                      _buildInformation(),
+                      const SizedBox(height: 100),
+                    ],
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ],
       ),
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1129,15 +1134,15 @@ class AppDetailsPage extends StatelessWidget {
                   'GET',
                   style: TextStyle(
                     fontSize: 16,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 onPressed: () {
-                  // Show download progress indicator
-                  // showCupertinoDialog(
-                  // context: context,
-                  // builder: (context) => _DownloadProgressDialog(),
-                  // );
+                  showCupertinoDialog(
+                    context: context,
+                    builder: (context) => _DownloadProgressDialog(),
+                  );
                 },
               ),
             ],
