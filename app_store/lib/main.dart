@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(const MyApp());
 
@@ -610,13 +611,20 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'FRIDAY 14 MAY',
-                    style: TextStyle(
-                      color: CupertinoColors.white.withAlpha(153),
-                      fontSize: 13,
-                      letterSpacing: 0.5,
-                    ),
+            StreamBuilder(
+                    stream: Stream.periodic(const Duration(seconds: 1)),
+                    builder: (context, snapshot) {
+                      final now = DateTime.now();
+                      final formatter = DateFormat('EEEE d MMMM');
+                      return Text(
+                        formatter.format(now),
+                        style: TextStyle(
+                          color: CupertinoColors.white.withAlpha(153),
+                          fontSize: 13,
+                          letterSpacing: 0.5,
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(height: 30),
                   _buildFeaturedSection(context),
