@@ -15,7 +15,7 @@ class FeaturedSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AspectRatio(
-            aspectRatio: 16/9,
+            aspectRatio: 16 / 9,
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),
