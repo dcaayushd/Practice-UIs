@@ -6,6 +6,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,7 +136,7 @@ class _Icons extends StatelessWidget {
 class _MusicButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 50.0,
       width: 50.0,
       child: Stack(
@@ -191,7 +195,7 @@ class _Button extends StatelessWidget {
 class _ProfileIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 70.0,
       width: 60.0,
       child: Stack(
@@ -234,7 +238,7 @@ class _Description extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "@dancamdev",
+            "@dcaayushd",
             style: TextStyle(
               color: Colors.white,
               fontSize: 16.0,
@@ -268,7 +272,7 @@ class _Description extends StatelessWidget {
 class _CreateButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 50.0,
       height: 40.0,
       child: Stack(
