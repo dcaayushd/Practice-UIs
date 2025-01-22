@@ -125,7 +125,7 @@ class _Icons extends StatelessWidget {
             icon: Icons.share_rounded,
             text: "2000",
           ),
-          const SizedBox(height: 24.0), 
+          const SizedBox(height: 24.0),
           _MusicButton(),
         ],
       ),
@@ -171,7 +171,7 @@ class _Button extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  const _Button({required this.icon,required this.text});
+  const _Button({required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +218,11 @@ class _ProfileIcon extends StatelessWidget {
                 borderRadius: BorderRadius.circular(60.0),
               ),
               child: Center(
-                child: Icon(Icons.add, color: Colors.white, size: 23.0),
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 23.0,
+                ),
               ),
             ),
           ),
