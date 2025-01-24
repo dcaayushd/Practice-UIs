@@ -272,8 +272,8 @@ class _Track extends StatelessWidget {
 
   const _Track({
     required this.title,
-      required this.artist,
-     required  this.cover,
+    required this.artist,
+    required this.cover,
   });
 
   @override
@@ -315,7 +315,11 @@ class _Track extends StatelessWidget {
                   ),
                 ],
               ),
-              Icon(Icons.more_horiz_outlined, color: Colors.white, size: 30.0),
+              Icon(
+                Icons.more_horiz_outlined,
+                color: Colors.white,
+                size: 30.0,
+              ),
             ],
           ),
         ),
