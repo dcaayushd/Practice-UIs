@@ -42,7 +42,10 @@ class HomePage extends StatelessWidget {
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.library_music_outlined, color: Colors.white),
+            icon: Icon(
+              Icons.library_music_outlined,
+              color: Colors.white,
+            ),
             label: "Library",
           ),
         ],
